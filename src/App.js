@@ -440,50 +440,50 @@ function App() {
 
     try {
       // Step 1: Check for Conference Name
-      setCurrentStep(1);
-      animateProgressBar(1);
       const matchedTask = await verifyConferenceName(inputValue);
       setStatusMessage({
         message: "Step 1: Verifying Task Name Completed Successfully",
         isError: false,
       });
+      setCurrentStep(1);
+      animateProgressBar(1);
 
       // Step 2: Verify Active Status
-      setCurrentStep(2);
-      animateProgressBar(2);
       const taskDetails = await verifyActiveStatus(matchedTask);
       setStatusMessage({
         message:
           "Step 2: Verifying Conference Status is Active Completed Successfully",
         isError: false,
       });
+      setCurrentStep(2);
+      animateProgressBar(2);
 
       // Step 3: Verify Custom Fields
-      setCurrentStep(3);
-      animateProgressBar(3);
       const verifiedTaskDetails = await verifyCustomFields(taskDetails);
       setStatusMessage({
         message:
           "Step 3: Verifying Additional Conference Custom Fields Completed Successfully",
         isError: false,
       });
+      setCurrentStep(3);
+      animateProgressBar(3);
 
       // Steps 4 and 5: Create Check-In and Check-Out Tasks
-      setCurrentStep(4);
-      animateProgressBar(4);
       await createCheckInTasks(verifiedTaskDetails);
       setStatusMessage({
         message: "Step 4: Creating Check-In Tasks Completed Successfully",
         isError: false,
       });
+      setCurrentStep(4);
+      animateProgressBar(4);
 
-      setCurrentStep(5);
-      animateProgressBar(5);
       await createCheckOutTasks(verifiedTaskDetails);
       setStatusMessage({
         message: "Step 5: Creating Check-Out Tasks Completed Successfully",
         isError: false,
       });
+      setCurrentStep(5);
+      animateProgressBar(5);
 
       setStatusMessage({
         message: "Process Completed Successfully",
