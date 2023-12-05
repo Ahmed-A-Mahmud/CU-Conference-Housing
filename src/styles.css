@@ -1,0 +1,71 @@
+/* Import Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+.app-container {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  background-color: #b9d9eb; /* Pantone 290 */
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em; /* Increased base font-size */
+}
+
+input[type="text"] {
+  font-family: "Montserrat", sans-serif;
+  padding: 30px;
+  margin: 20px 0;
+  border: 2px solid #333;
+  border-radius: 5px;
+  outline: none;
+  width: 50%;
+  font-size: 2em; /* Relative to the container's font-size */
+  text-align: center; /* Center-align the text */
+}
+
+button {
+  background-color: #3c69e7; /* Pantone 284 */
+  color: white;
+  padding: 15px 30px; /* Increased padding */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 2em; /* Relative to the container's font-size */
+}
+
+button:hover {
+  background-color: #3458c1; /* Darker shade of Pantone 284 for hover effect */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+label {
+  margin-bottom: 10px; /* Adjusted margin */
+  font-size: 2em; /* Increased font-size */
+}
+
+.message {
+  margin-top: 30px; /* Adjusted margin */
+  font-size: 1.4em; /* Increased font-size */
+  font-family: "Montserrat", sans-serif;
+}
+
+.success {
+  color: #3c69e7; /* Pantone 284 */
+}
+
+.error {
+  color: red;
+}
+
+#progress-container {
+  width: 100%; /* Ensure it takes the full width */
+  margin-top: 60px; /* Increase this value as needed to move the progress bar down */
+}
